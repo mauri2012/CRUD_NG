@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "categoryName": "Sony"
+    },
+    {
+      "id": 1,
+      "categoryName": "Sound Core"
+    },
+    {
+      "id": 2,
+      "categoryName": "JLB"
+    },
+    {
+      "id": 3,
+      "categoryName": "Redragon"
+    },
+    {
+      "id": 4,
+      "categoryName": "Logitech"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Auriculares Inalámbricos Sony Wh-1000xm4",
+      "category_id": 0,
+      "product_img": "http://localhost:4200/assets/1.webp",
+      "description": "Black Wireless Headphones",
+      "price": 499999,
+      "is_available": 0,
+      "rating": 0,
+      "reviews": 120,
+      "wareanty": 2
+    },
+    {
+      "name": "Auriculares Jbl Tune 770nc Noise Canceling Over Ear",
+      "description": "Over Ear Blue Color Azul",
+      "price": 139999,
+      "rating": 0,
+      "reviews": 0,
+      "is_available": 1,
+      "warranty": 1,
+      "category_id": 2,
+      "id": 3,
+      "product_img": "http://localhost:4200/assets/3.webp"
+    },
+    {
+      "id": 4,
+      "name": "Auriculares Sony Bluetooth Inalámbricos WH-CH520",
+      "category_id": 0,
+      "product_img": "http://localhost:4200/assets/4.webp",
+      "description": "YY2958 - Color Azul",
+      "price": 99990,
+      "is_available": 0,
+      "rating": 5,
+      "reviews": 500,
+      "warranty": 2
+    },
+    {
+      "id": 5,
+      "name": "Auriculares gamer inalámbricos Logitech G",
+      "category_id": 4,
+      "product_img": "http://localhost:4200/assets/5.webp",
+      "description": "G Series G435 blanco crudo y lila",
+      "price": 107919,
+      "is_available": 0,
+      "rating": 4.8,
+      "reviews": 300,
+      "warranty": 3
+    },
+    {
+      "id": 6,
+      "name": "Auriculares gamer Redragon Redragon Zeus X",
+      "category_id": 3,
+      "product_img": "http://localhost:4200/assets/6.webp",
+      "description": "X Wireless H510-WL negro con luz rgb LED",
+      "price": 106999,
+      "is_available": 0,
+      "rating": 4.7,
+      "reviews": 200,
+      "warranty": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

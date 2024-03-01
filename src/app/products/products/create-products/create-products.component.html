@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <h2 style="background-color: beige;">Add New Product</h2>
+  <form (submit)="addNewProduct(addProductForm)" #addProductForm="ngForm">
+    <div class="mb-3">
+      <label for="productName" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="productName" placeholder="Enter product name" name="productName" ngModel>
+    </div>
+    <div class="mb-3">
+
+      <label for="productImg" class="form-label">Product Image</label>
+      <input type="file" class="form-control" id="productImg" placeholder="Enter product image URL" name="productImg" ngModel (change)="onFileSelected($event)" >
+    </div>
+    <div class="col-6 mb-3 " >
+      <label for="categoria" class="form-label">Categoria</label>
+      <select name="categoriaId" id="categoriaId"  class="form-select" ngModel>
+        <option *ngFor="let cat of categoryList" value="{{cat.id}}">{{ cat.categoryName }}</option>
+      </select>
+
+    </div>
+
+    
+    <div class="row">
+      <div class="col-6 mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Enter price" name="price" ngModel>
+      </div>
+      <div class="col-6 mb-3">
+        <label for="availability" class="form-label">Availability</label>
+        <select class="form-select" id="availability" name="availability" ngModel>
+          <option value="0">Available</option>
+          <option value="1">Not Available</option>
+        </select>
+      </div>
+    </div>
+   <div class="row">
+
+    <div class=" col-4 mb-3">
+      <label for="warranty" class="form-label">Warranty</label>
+      <input type="number" class="form-control" id="warranty" placeholder="Enter warranty period" name="warranty" ngModel>
+    </div>
+   </div>
+ 
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" rows="3" placeholder="Enter product description" name="description" ngModel></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </form>
+</div>

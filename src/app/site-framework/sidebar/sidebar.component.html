@@ -1,0 +1,11 @@
+<h1 class="my-4">Shop Name</h1>
+<div class="list-group">
+    <a href="products/create-products" class="list-group-item"> New Product</a>
+</div>
+<div class="list-group">
+    <a href="products" class="list-group-item">All products</a>
+</div>
+<div class="list-group" *ngFor="let cat of categoryList">
+
+    <a href="products/category/{{cat.id}}" class="list-group-item" >{{ cat.categoryName}}</a>
+</div>

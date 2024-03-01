@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <h2>Add New Product</h2>
+    <form (submit)="updateProduct(addProductForm)" #addProductForm="ngForm">
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter product name" name="productName" [(ngModel)]="productDetails[0].name">
+      </div>
+      <div class="mb-3">
+  
+        <label for="productImg" class="form-label">Product Image</label>
+        <input type="file" class="form-control" id="productImg" placeholder="Enter product image URL" name="productImg" (change)="onFileSelected($event)"  >
+      </div>
+      <div class="col-6 mb-3 " >
+        <label for="categoria" class="form-label">Categoria</label>
+        <select name="categoriaId" id="categoriaId"  class="form-select"  [(ngModel)]="productDetails[0].category_id">
+          <option *ngFor="let cat of categoryList" value="{{cat.id}}">{{ cat.categoryName }}</option>
+        </select>
+  
+      </div>
+  
+      
+      <div class="row">
+        <div class="col-6 mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" placeholder="Enter price" name="price"  [(ngModel)]="productDetails[0].price">
+        </div>
+        <div class="col-6 mb-3">
+          <label for="availability" class="form-label">Availability</label>
+          <select class="form-select" id="availability" name="availability"  [(ngModel)]="productDetails[0].is_available">
+            <option value="0">Available</option>
+            <option value="1">Not Available</option>
+          </select>
+        </div>
+      </div>
+     <div class="row">
+      <div class=" col-4 mb-3">
+        <label for="warranty" class="form-label">Warranty</label>
+        <input type="number" class="form-control" id="warranty" placeholder="Enter warranty period" name="warranty"  [(ngModel)]="productDetails[0].warranty">
+      </div>
+     </div>
+   
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" placeholder="Enter product description" name="description"  [(ngModel)]="productDetails[0].description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+      <button type="reset" class="btn btn-danger">Clear</button>
+    </form>
+  
+</div>
+  
